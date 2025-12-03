@@ -1,0 +1,23 @@
+10 HTML Tags:-
+
+<head>-head
+<title>-Title
+<body>-Body Text
+<nav>-navigation
+<li>-list
+<a>-anchor
+<h1>-Header 1
+<script>-Calling java Script
+<footer>-Footer of Page
+<button>-Calling Button
+
+5 CSS tags:-
+
+font-family-Font uniform throught Webpage
+background-color:-Changes background color
+font-size:-Sets Font Size
+color:- Changes Color of text
+line-Height:-vertical spacing between lines
+
+I used Bootstrap to create a professional Layout and used the cards feature to make it look more attractive. I add Javascript
+to send the mail to and also add interactivity.

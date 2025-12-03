@@ -1,0 +1,226 @@
+/* ============================= */
+/* Global styles & base colours   */
+/* ============================= */
+:root {
+  /* Define your theme colours */
+  --primary-color: #1e3a8a;   /* deep blue / navy */
+  --secondary-color: #2563eb; /* lighter blue accent */
+  --accent-color: #f59e0b;    /* warm accent (orange/yellow) */
+  --bg-light: #f4f6f8;
+  --text-dark: #212529;
+  --text-light: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* Navbar styling                */
+/* ============================= */
+.navbar {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--text-light) !important;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  color: var(--text-light) !important;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* Hero / Banner Section         */
+/* ============================= */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  color: var(--text-light);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional dark overlay for text readability */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(30, 58, 138, 0.6); /* semi‑transparent overlay using primary color */
+  z-index: 0;
+}
+
+.hero-banner .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-banner p.lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* ============================= */
+/* Card / Portfolio Items        */
+/* ============================= */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.card-text {
+  color: #495057;
+}
+
+/* Add image inside card easily */
+.card img {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+/* ============================= */
+/* Sections & Layout             */
+/* ============================= */
+section {
+  padding: 2rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+section p, section ul, section ol {
+  font-size: 1rem;
+  color: #555;
+}
+
+section ul, section ol {
+  padding-left: 1.5rem;
+}
+
+/* ============================= */
+/* Buttons                       */
+/* ============================= */
+.btn-primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* Contact form styling          */
+/* ============================= */
+form input, form textarea {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.25);
+}
+
+/* ============================= */
+/* Footer                        */
+/* ============================= */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: var(--accent-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* Responsive tweaks             */
+/* ============================= */
+@media (max-width: 768px) {
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
+  .hero-banner p.lead {
+    font-size: 1rem;
+  }
+  section h2 {
+    font-size: 1.6rem;
+  }
+}
+
